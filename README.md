@@ -8,24 +8,24 @@ EduChain is a teaching prototype for blockchain-based diploma verification. A un
 
 The prototype uses invented test data only. It does not store student names, IIN, grades, diploma files or other personal information on-chain.
 
-## Included files
+## Included Files
 
 - `contracts/IssuerRegistry.sol` — administrator-managed list of approved universities.
 - `contracts/CredentialAnchor.sol` — stores credential hashes and revocation status.
 - `test/EduChain.js` — automated tests for core functions and access restrictions.
 - `docs/sequence-diagram.mmd` — sequence diagram source.
-- `docs/security-analysis.md` — initial security threat analysis for the report.
+- `docs/security-analysis.md` — initial security threat analysis.
 
 ## Requirements
 
-- Node.js installed
-- npm installed
+- Node.js installed.
+- npm installed.
 
-## Run on Windows PowerShell
+## Installation and Execution on Windows PowerShell
 
-Open this folder in VS Code, then choose **Terminal → New Terminal**.
+Open this project folder in VS Code and select **Terminal → New Terminal**.
 
-Because PowerShell may block the `npm.ps1` script on some Windows installations, use `npm.cmd`:
+Use the following commands:
 
 ```powershell
 npm.cmd install
@@ -39,14 +39,31 @@ To start a local test blockchain:
 npm.cmd run node
 ```
 
-Keep that terminal open while the local node is running. This is a local development network only.
+Keep the terminal open while the local node is running. This is a local development network only.
 
-## Expected test result
+## Expected Test Result
 
-The test suite should report **9 passing**. If the result differs, copy the complete terminal output and investigate before recording a demo.
+The test suite should report **9 passing**.
 
-## Important limitations
+If the result differs, investigate the error before recording the demonstration video.
 
-This is a simplified coursework prototype, not production software. It has not undergone an independent security audit, legal review, penetration test or production deployment. The administrator is a single account, and the prototype does not implement institutional multi-signature governance, identity proofing, encrypted off-chain storage, W3C Verifiable Credential issuance, or a production key-recovery process.
+## Security and Limitations
 
-A passing test suite proves only that the tested behaviours work in the local development environment. It does not prove market demand, legal compliance, or production security.
+This is a simplified coursework prototype, not production software. It has not undergone an independent security audit, legal review, penetration test or production deployment.
+
+The administrator is a single account. The prototype does not implement institutional multi-signature governance, identity proofing, encrypted off-chain storage, W3C Verifiable Credential issuance or a production key-recovery process.
+
+A passing test suite proves only that the tested behaviours work in the local development environment. It does not prove market demand, legal compliance or production security.
+
+## Project Links
+
+- GitHub Repository: [ADD GITHUB LINK]
+- Demonstration Video: [ADD VIDEO LINK]
+
+## AI Disclosure
+
+AI tools, including ChatGPT, were used to assist with documentation, explanations, code review and preparation of project materials. The team is responsible for reviewing, understanding and verifying all submitted work.
+
+## Disclaimer
+
+This project is developed exclusively for educational purposes. It does not provide real diploma verification services and must not be used with real personal data or funds.
