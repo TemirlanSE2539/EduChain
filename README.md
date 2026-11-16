@@ -55,14 +55,9 @@ The administrator is a single account. The prototype does not implement institut
 
 A passing test suite proves only that the tested behaviours work in the local development environment. It does not prove market demand, legal compliance or production security.
 
-## Project Links
+## Project Repository
 
-- GitHub Repository: [ADD GITHUB LINK]
-- Demonstration Video: [ADD VIDEO LINK]
-
-## AI Disclosure
-
-AI tools, including ChatGPT, were used to assist with documentation, explanations, code review and preparation of project materials. The team is responsible for reviewing, understanding and verifying all submitted work.
+GitHub: https://github.com/TemirlanSE2539/EduChain
 
 ## Disclaimer
 
