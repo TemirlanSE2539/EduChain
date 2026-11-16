@@ -1,0 +1,28 @@
+sequenceDiagram
+    actor University
+    participant UI as Issuer Dashboard
+    participant API as Backend / API
+    participant Registry as IssuerRegistry
+    participant Contract as CredentialAnchor
+    actor Graduate
+    actor Employer as Employer / Verifier
+
+    University->>UI: Sign in and select graduate record
+    UI->>API: Submit approved credential data
+    API->>API: Create credential hash (demo data only)
+    API->>Registry: Check university active status
+    Registry-->>API: Active / inactive
+    API->>Contract: addDiploma(diplomaId, diplomaHash)
+    Contract-->>API: Transaction confirmed
+    API-->>Graduate: Shareable credential reference
+
+    Graduate->>Employer: Share credential and proof
+    Employer->>API: Submit diplomaId and presented hash
+    API->>Contract: checkDiploma(diplomaId, presentedHash)
+    Contract-->>API: true / false
+    API-->>Employer: Verification result
+
+    University->>Contract: revokeDiploma(diplomaId)
+    Contract-->>University: Revocation confirmed
+    Employer->>Contract: Check same credential again
+    Contract-->>Employer: false (revoked)
